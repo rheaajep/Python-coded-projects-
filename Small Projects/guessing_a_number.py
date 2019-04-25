@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import random 
 response='yes'
 print("let's play a guessing game")
@@ -35,22 +29,3 @@ while response=='yes'or'YES'or'Yes':
     if guessed==0:
         print("Sorry, the guesses were wrong, the real number is ",number)
     response=input("do you wish to continue: ")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
