@@ -1,5 +1,6 @@
 # Small Coded Projects
 The projects here are small Python Coded projects:
+
 **1. Rolling a dice:**
 This project is a simple game that randomly rolls a dice every time and gives you the number that probably appeared on that device. 
 
