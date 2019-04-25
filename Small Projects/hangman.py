@@ -1,15 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 import random
 print('Welcome to hangman, lets begin the guessing game') 
 words=['bungler','bagpipe','dwarves','awkward','faking','equip','buffoon','oxygen','rhythm']
@@ -60,18 +48,3 @@ while continueMoving=='yes':
         print("the word is: ",hangmanWord)
     
     continueMoving=input("would you like to play again: ")
-
-        
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
