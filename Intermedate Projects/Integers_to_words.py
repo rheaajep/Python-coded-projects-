@@ -1,21 +1,17 @@
-import numpy as np
-import fractions
-import re 
-import collections
-
+#this code converts positive integers to it's word form 
+#the input cannot exceed 2^31 -1 
 
 ones=["zero","one","two","three","four","five","six","seven","eight","nine"]
 tens=["tens","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
 twentys=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
-hundreds=["hundred","thousand","million","billion"]
 word_form=[]
 
+#function to print single digit numbers 
 def one_word(numb):
     word_form.append(ones[int(numb)])
 
+#function to print double digit numbers 
 def tens_word(numb):
-    #print("comes here")
-    print(numb)
     if int(numb)!=0:
         if int(numb)>=20:
             word_form.append(twentys[int(numb[0])-2])
@@ -27,7 +23,7 @@ def tens_word(numb):
         else:
             word_form.append(tens[int(numb)-10])
 
-
+#to print numbers in hundreds 
 def hundred_word(numb):
     #print("comes in hundred")
     if int(numb)!=0:
@@ -36,7 +32,7 @@ def hundred_word(numb):
             
         tens_word(numb[1:])
 
-
+#to print all thousand numbers 
 def thousand_word(numb):
         #print("comes in thousand")
         num1=numb[len(numb)-3:]
@@ -53,9 +49,8 @@ def thousand_word(numb):
 
         hundred_word(num1)
 
+#to print numbers in millions 
 def million_word(numb):
-
-        #print("comes in million")
         num1=numb[len(numb)-6:]
         num2=numb[0:len(numb)-6]
         if int(num2)!=0:
@@ -69,7 +64,7 @@ def million_word(numb):
 
         thousand_word(num1)
 
-
+#to print numbers in billions 
 def billion_word(numb):
     num1=numb[1:]
     one_word(numb[0])
